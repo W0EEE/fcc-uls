@@ -1,0 +1,2 @@
+scripts/table-schema.psql: it works at present, but major performance improvements are needed
+

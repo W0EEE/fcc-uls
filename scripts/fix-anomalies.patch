@@ -1,0 +1,115 @@
+diff -u orig/a_CO.dat a_CO.dat
+--- orig/a_CO.dat	2024-01-18 18:20:56.802766981 -0600
++++ a_CO.dat	2024-01-18 18:45:44.978540148 -0600
+@@ -845,8 +845,7 @@
+ CO|2671305|0001926273||11/10/2004|Due to administrative error, this call sign has been set aside and a new license issued with corrected call sign./jjs||
+ CO|2695938|0001924244||11/10/2004|Due to administrative error, this call sign has been set aside and a new license issued with corrected call sign./jjs||
+ CO|3860365|0002928684||03/06/2020|Dismissal reversed until FCC 20-12 becomes final.||
+-CO|4262988|0003272664||05/11/2009|Per DA 09-1036, application 0003272264 is set aside and granted.
+-||
++CO|4262988|0003272664||05/11/2009|Per DA 09-1036, application 0003272264 is set aside and granted.||
+ CO|4423250|0003406407||06/06/2008|Application set aside and dismissed pursuant to the applicant's request. rrw/jc/case # 1029696||
+ CO|5080002|0003932775||08/31/2009|Applicant stated in e-mail dated 8/28/09 that he wanted application to be processed, not withdrawn. rrw||
+ CO|5098068|0003946022||10/01/2009|Vanity call sign KP4DC was rescinded and call sign WP4JED (previous call) was reinstated due to ineligibility. dls/rw||
+diff -u orig/a_HD.dat a_HD.dat
+--- orig/a_HD.dat	2024-01-18 18:20:57.271764883 -0600
++++ a_HD.dat	2024-01-18 18:49:49.775622830 -0600
+@@ -2824279,7 +2824279,7 @@
+ HD|13141539|0009850020||WA6VVL||HA||||||||||||N||||||||||N||David|W|Ishmael|||||||||||01/05/2022|||||||N||||||||
+ HD|13141541|0009850017||KD2SDD||HA||||||||||||N||||||||||N||Joel||DeGennaro|||||||||||01/05/2022|||||||N||||||||
+ HD|13141545|0009850018||KD4HML||HA||||||||||||N||||||||||N||Jason|M|Perretta||Self|||||||||01/05/2022|||||||N||||||||
+-HD|13141547|0009850021||KM6OXX||HA||||||||||||N||||||||||N||George||Rizkalla||KM6OXX | WRAN688|||||||||01/05/2022|||||||N||||||||
++HD|13141547|0009850021||KM6OXX||HA||||||||||||N||||||||||N||George||Rizkalla||KM6OXX / WRAN688|||||||||01/05/2022|||||||N||||||||
+ HD|13141550|0009850023||KD4MAN||HA||||||||||||N||||||||||N||Jeffery|L|Barbour|||||||||||01/05/2022|||||||N||||||||
+ HD|13141551|0009850028||W4UQ||HV||||||||||||||||||||||N||Fabrice|L|Collin|||||||||||01/05/2022|||||||N||||||||
+ HD|13141554|0009850026||AB9IF||HA||||||||||||||||||||||N||James|W|Glass|Jr.|Mr|||||||||01/05/2022|||||||N||||||||
+diff -u orig/a_SF.dat a_SF.dat
+--- orig/a_SF.dat	2024-01-18 18:20:57.579763504 -0600
++++ a_SF.dat	2024-01-18 18:50:31.661170700 -0600
+@@ -22,8 +22,7 @@
+ SF|5588306|0004299867|||P|8518964|1|Request for waiver of Section 1.949 granted on 7/9/10. In future, licensee must comply with the Commission's procedures for license renewals. See Public Notice DA 03-1974 (rel. June 16, 2003).||
+ SF|5642475|0004340889|||P|8530347|1|Request for waiver of Section 1.949 granted on 8/3/10. In future, licensee must comply with the Commission's procedures for license renewals. See Public Notice, DA 03-1974 (rel. June 16, 2003).||
+ SF|5749758|0004416834|||P|8562712|1|Request for waiver of Section 1.949 granted on October 13, 2010. In future, licemsee must comply with the Commission's procedure for license renewals. See Public Notice, DA 03-1974 (rel. June 16, 2003).||
+-SF|4802536|0003728619|||P|8576283|1|License granted for two years.  Licensee will be considered for ten-year renewal unless it is determined that licensee committed any rule violation during this two-year term.
+-||
++SF|4802536|0003728619|||P|8576283|1|License granted for two years.  Licensee will be considered for ten-year renewal unless it is determined that licensee committed any rule violation during this two-year term.||
+ SF|5786442|0004437613|||P|8577347|1|Request for waiver of Section 1.949 granted on November 9, 2010. In future, licensee must comply with the Commission's procedures for license renewals. See Public Notice, DA 03-1974 (rel. June 16, 2003).||
+ SF|5927091|0004560233|||P|8649468|1|Request for waiver of Section 1.949 granted on January 6, 2011. In future, licensee must comply with the Commission's procedures for license renewals. See Public Notice, DA 03-1974 (rel. June 16, 2003).||
+ SF|6373502|0004880150|||P|8859968|1|Request for waiver of Section 1.949 granted on 10/14/2011. In future, licensee must comply with the Commission's procedures for license renewals. See Public Notice, DA 03-1974 (rel. June 16, 2003).||
+diff -u orig/a_VC.dat a_VC.dat
+--- orig/a_VC.dat	2024-01-18 18:20:57.594763437 -0600
++++ a_VC.dat	2024-01-18 18:56:13.000828431 -0600
+@@ -758974,7 +758974,7 @@
+ VC|13743541|0010302420||14|/
+ VC|13743541|0010302420||15|\
+ VC|13743541|0010302420||16|`
+-VC|13743541|0010302420||17||
++VC|13743541|0010302420||17|(pipe)
+ VC|13743541|0010302420||18|$
+ VC|13743541|0010302420||19|-
+ VC|13743541|0010302420||20|"
+diff -u orig/l_CO.dat l_CO.dat
+--- orig/l_CO.dat	2024-01-18 18:20:57.641763226 -0600
++++ l_CO.dat	2024-01-18 18:44:44.484297855 -0600
+@@ -20428,8 +20428,7 @@
+ CO|496571||KD4KOL|04/06/2007|Issued vanity call sign.||
+ CO|496578||KD4KOS|03/06/2001|Issued vanity call sign.||
+ CO|496592||KD4KPH|04/23/2021|Issued vanity call sign.||
+-CO|496596||KD4KPL|01/04/2024|Per case 1278336 licensee deceased on 1/19/22, dvy.
+-License cancelled in accordance to rule section 97.19(c)(3).||
++CO|496596||KD4KPL|01/04/2024|Per case 1278336 licensee deceased on 1/19/22, dvy. License cancelled in accordance to rule section 97.19(c)(3).||
+ CO|496609||KD4KQ|11/07/2000|Issued vanity call sign.||
+ CO|496622||KD4KQS|06/10/2016|Issued vanity call sign.||
+ CO|496630||KD4KRB|01/27/2004|Issued vanity call sign.||
+@@ -32953,8 +32953,7 @@
+ CO|626848||N0BBO|05/03/2000|Issued new systematic call sign.||
+ CO|626867||N0BCS|04/27/2015|Issued new systematic call sign.||
+ CO|626898||N0BFN|06/21/2000|Issued new systematic call sign.||
+-CO|626920||N0BGY|08/14/2020|Per case 778070 licensee deceased on 8/24/2018. DVY.   
+-License cancelled in accordance to rule section 97.19(c)(3)||
++CO|626920||N0BGY|08/14/2020|Per case 778070 licensee deceased on 8/24/2018. DVY. License cancelled in accordance to rule section 97.19(c)(3)||
+ CO|626941||N0BID|08/06/2021|Issued vanity call sign.||
+ CO|626944||N0BIH|03/07/2002|Issued vanity call sign.||
+ CO|626958||N0BJC|06/22/2004|Issued new systematic call sign.||
+@@ -43217,8 +43216,7 @@
+ CO|771702||NO1H|04/21/2020|Per case 733067, licensee deceased 7/13/11.  License cancelled pursuant to FCC Rule 97.19(c)(3).rrw||
+ CO|771706||NO1M|04/21/2020|Per case 733072, licensee deceased 11/7/10.  License cancelled pursuant to 97.19(c)(3).rrw||
+ CO|771707||NO1N|10/12/2007|Issued vanity call sign.||
+-CO|771730||NO2O|06/22/2015|Per Case 2541430, licensee deceased 06/02/2014.rrw
+-||
++CO|771730||NO2O|06/22/2015|Per Case 2541430, licensee deceased 06/02/2014.rrw||
+ CO|771736||NO2V|12/09/2019|Per case 676305, licensee deceased 3/8/17. License cancelled in accordance with 97.19(c)(3).rrw||
+ CO|771740||NO2Z|03/15/2011|Licensee deceased 02/26/08. (WT Docket 09-209) rrw||
+ CO|771777||NO4N|08/21/2007|Issued vanity call sign.||
+@@ -44882,9 +44880,7 @@
+ CO|797588||W4JNK|03/22/2013|Issued vanity call sign.||
+ CO|797592||W4JO|03/15/2011|Licensee deceased 7/8/10. rrw||
+ CO|797617||W4JQT|08/16/2013|Licensee deceased 4/8/13.rrw||
+-CO|797619||W4JR|02/15/2023|Per case 1126399 licensee deceased on 10/28/19, DVY. 
+-License cancelled in accordance to rule section 97.19(c)(3)  
+-||
++CO|797619||W4JR|02/15/2023|Per case 1126399 licensee deceased on 10/28/19, DVY. License cancelled in accordance to rule section 97.19(c)(3)||
+ CO|797620||W4JRA|06/22/2001|Issued vanity call sign.||
+ CO|797666||W4JVE|10/24/2015|Issued vanity call sign.||
+ CO|797672||W4JVQ|10/23/1999|Issued vanity call sign.||
+@@ -45338,8 +45334,7 @@
+ CO|805124||W5MJQ|10/19/2012|Issued vanity call sign.||
+ CO|805159||W5MOE|03/31/2000|Issued vanity call sign.||
+ CO|805219||W5MV|07/17/2018|Per case #HD0000479049, licensee deceased 07/14/2013. License cancelled in accordance with FCC rule 97.19(c)(3). krk||
+-CO|805254||W5NA|06/28/2021|Per case 895715 licensee deceased on 7/8/19, DVY.
+-License cancelled in accordance to rule section 97.19(c)(3)||
++CO|805254||W5NA|06/28/2021|Per case 895715 licensee deceased on 7/8/19, DVY. License cancelled in accordance to rule section 97.19(c)(3)||
+ CO|805262||W5NAU|09/28/2012|Licensee deceased 5/7/10 (WT Docket 09-209). rrw||
+ CO|805289||W5NDQ|04/09/2004|Issued vanity call sign.||
+ CO|805336||W5NK|02/27/2014|License deceased 02/09/11 (WT Docket 09-209).rrw||
+@@ -62928,8 +62923,7 @@
+ CO|1169135||KG4JVX|12/29/2010|Issued new systematic call sign.||
+ CO|1169152||W5NMX|03/13/2012|Issued vanity call sign.||
+ CO|1169156||W2NG|12/10/2004|Issued vanity call sign.||
+-CO|1169159||W4TT|05/12/2021|Per case 882635 licensee deceased on 6/10/15, DVY.
+-License cancelled in accordance to rule section 97.19(c)(3)||
++CO|1169159||W4TT|05/12/2021|Per case 882635 licensee deceased on 6/10/15, DVY. License cancelled in accordance to rule section 97.19(c)(3)||
+ CO|1169163||W7ALT|03/27/2018|Per case #HD0000430241, licensee deceased on 11/19/2016. krk||
+ CO|1169171||N2ROK|12/08/2000|Issued vanity call sign.||
+ CO|1169219||KG6DNN|04/09/2004|Issued vanity call sign.||
+
