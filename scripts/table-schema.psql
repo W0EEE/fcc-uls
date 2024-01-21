@@ -5,6 +5,9 @@
 -- non-amateur-radio related tables were omitted
 -- non-postgres datatypes were replaced with their postgres equivalents
 -- a preamble was added to nuke the tables to simplify schema replacements
+-- the db_version table was added so we can tell the user if the db is stale
+-- the record_type columns were deleted from all the tables. it's just stupid.
+-- USIs were added as primary keys on all the tables
 
 drop table if exists db_version;
 
@@ -30,14 +33,23 @@ drop table if exists l_LA;
 
 create table db_version
 (
-  last_update timestamp null
+  weekday char(3) primary key,
+  l_mod bigint not null,
+  a_mod bigint not null
 );
 
-insert into db_version values (NULL);
+insert into db_version values
+  ('sun', 0, 0),
+  ('mon', 0, 0),
+  ('tue', 0, 0),
+  ('wed', 0, 0),
+  ('thu', 0, 0),
+  ('fri', 0, 0),
+  ('sat', 0, 0)
+;
 
 create table a_HD
 (
-      record_type               char(2)              not null,
       unique_system_identifier  numeric(9,0)         not null,
       uls_file_number           char(14)             null,
       ebf_number                varchar(30)          null,
@@ -98,9 +110,10 @@ create table a_HD
       payment_cert_900        char(1)              null
 );
 
+create index a_HD_usi on a_HD (unique_system_identifier);
+
 create table a_AD
 (
-      Record_Type               	char(2)              null,
       unique_system_identifier  	numeric(9,0)         not null,
       ULS_File_Number           	char(14)             null,
       EBF_Number                	varchar(30)          null,
@@ -133,18 +146,20 @@ create table a_AD
       use_of_service       		char(1)		     null
 );
 
+create index a_AD_usi on a_HD (unique_system_identifier);
+
 create table a_RE
 (
-      Record_Type               char(2)              not null,
       unique_system_identifier  numeric(9,0)         not null,
       ULS_File_Number           char(14)             null,
       EBF_Number                varchar(30)          null,
       Reason                    varchar(255)         null
 );
 
+create index a_RE_usi on a_RE (unique_system_identifier);
+
 create table a_EN
 (
-      record_type               char(2)              not null,
       unique_system_identifier  numeric(9,0)         not null,
       uls_file_number           char(14)             null,
       ebf_number                varchar(30)          null,
@@ -176,9 +191,10 @@ create table a_EN
       linked_callsign		char(10)		null
 );
 
+create index a_EN_usi on a_EN (unique_system_identifier);
+
 create table a_CO
 (
-      record_type               char(2)              not null,
       unique_system_identifier  numeric(9,0)         not null,
       uls_file_num              char(14)             null,
       callsign                  char(10)             null,
@@ -188,9 +204,10 @@ create table a_CO
       status_date		timestamp             null
 );
 
+create index a_CO_usi on a_CO (unique_system_identifier);
+
 create table a_HS
 (
-      record_type               char(2)              not null,
       unique_system_identifier  numeric(9,0)         not null,
       uls_file_number           char(14)             null,
       callsign                  char(10)             null,
@@ -198,11 +215,10 @@ create table a_HS
       code                      char(6)              null
 );
 
+create index a_HS_usi on a_HS (unique_system_identifier);
+
 create table a_SC
 (
-
-
-      record_type               char(2)              null,
       unique_system_identifier  numeric(9,0)         not null,
       uls_file_number           char(14)              null,
       ebf_number                varchar(30)           null, 
@@ -213,10 +229,11 @@ create table a_SC
 	status_date		timestamp		null
 );
 
+create index a_SC_usi on a_SC (unique_system_identifier);
+
 create table a_SF
 (
-      record_type               char(2)              null ,
-      unique_system_identifier  numeric(9,0)         null ,
+      unique_system_identifier  numeric(9,0)         not null ,
       uls_file_number           char(14)              null,
       ebf_number                varchar(30)           null, 
       callsign                  char(10)             null ,
@@ -228,9 +245,10 @@ create table a_SF
 	status_date		timestamp		null
 );
 
+create index a_SF_usi on a_SF (unique_system_identifier);
+
 create table a_AM
 (
-      record_type               char(2)              not null,
       unique_system_identifier  numeric(9,0)         not null,
       uls_file_num              char(14)             null,
       ebf_number                varchar(30)          null,
@@ -250,11 +268,10 @@ create table a_AM
       trustee_name              varchar(50)          null
 );
 
+create index a_AM_usi on a_AM (unique_system_identifier);
+
 create table a_VC
 (
-
-
-      record_type               char(2)              null,
       unique_system_identifier  numeric(9,0)         not null,
       uls_file_number           char(14)             null,
       ebf_number                varchar(30)          null,
@@ -262,9 +279,10 @@ create table a_VC
       callsign_requested        char(10)             null
 );
 
+create index a_VC_usi on a_VC (unique_system_identifier);
+
 create table a_AT
 (
-      Record_Type               char(2)              null,
       unique_system_identifier  numeric(9,0)         not null,
       ULS_File_Number           char(14)             null,
       EBF_Number                varchar(30)          null,
@@ -275,9 +293,10 @@ create table a_AT
       attachment_action_performed char(1)            null
 );
 
+create index a_AT_usi on a_AT (unique_system_identifier);
+
 create table l_HD
 (
-      record_type               char(2)              not null,
       unique_system_identifier  numeric(9,0)         not null,
       uls_file_number           char(14)             null,
       ebf_number                varchar(30)          null,
@@ -338,9 +357,10 @@ create table l_HD
       payment_cert_900        char(1)              null
 );
 
+create index l_HD_usi on l_HD (unique_system_identifier);
+
 create table l_EN
 (
-      record_type               char(2)              not null,
       unique_system_identifier  numeric(9,0)         not null,
       uls_file_number           char(14)             null,
       ebf_number                varchar(30)          null,
@@ -372,9 +392,10 @@ create table l_EN
       linked_callsign		char(10)		null
 );
 
+create index l_EN_usi on l_EN (unique_system_identifier);
+
 create table l_CO
 (
-      record_type               char(2)              not null,
       unique_system_identifier  numeric(9,0)         not null,
       uls_file_num              char(14)             null,
       callsign                  char(10)             null,
@@ -384,9 +405,10 @@ create table l_CO
       status_date		timestamp             null
 );
 
+create index l_CO_usi on l_CO (unique_system_identifier);
+
 create table l_HS
 (
-      record_type               char(2)              not null,
       unique_system_identifier  numeric(9,0)         not null,
       uls_file_number           char(14)             null,
       callsign                  char(10)             null,
@@ -394,11 +416,10 @@ create table l_HS
       code                      char(6)              null
 );
 
+create index l_HS_usi on l_HS (unique_system_identifier);
+
 create table l_SC
 (
-
-
-      record_type               char(2)              null,
       unique_system_identifier  numeric(9,0)         not null,
       uls_file_number           char(14)              null,
       ebf_number                varchar(30)           null, 
@@ -409,10 +430,11 @@ create table l_SC
 	status_date		timestamp		null
 );
 
+create index l_SC_usi on l_SC (unique_system_identifier);
+
 create table l_SF
 (
-      record_type               char(2)              null ,
-      unique_system_identifier  numeric(9,0)         null ,
+      unique_system_identifier  numeric(9,0)        not null ,
       uls_file_number           char(14)              null,
       ebf_number                varchar(30)           null, 
       callsign                  char(10)             null ,
@@ -424,9 +446,10 @@ create table l_SF
 	status_date		timestamp		null
 );
 
+create index l_SF_usi on l_SF (unique_system_identifier);
+
 create table l_AM
 (
-      record_type               char(2)              not null,
       unique_system_identifier  numeric(9,0)         not null,
       uls_file_num              char(14)             null,
       ebf_number                varchar(30)          null,
@@ -446,10 +469,11 @@ create table l_AM
       trustee_name              varchar(50)          null
 );
 
+create index l_AM_usi on l_AM (unique_system_identifier);
+
 create table l_LA
  (
-      record_type               char(2)              null ,
-      unique_system_identifier  numeric(9,0)         null ,
+      unique_system_identifier  numeric(9,0)         not null ,
       callsign                  char(10)             null ,
       attachment_code           char(1)              Null ,
       attachment_desc           varchar(60)          Null ,
@@ -457,4 +481,7 @@ create table l_LA
       attachment_filename       varchar(60)          Null ,
       action_performed          char(1)              Null
 );
+
+create index l_LA_usi on l_LA (unique_system_identifier);
+
 
